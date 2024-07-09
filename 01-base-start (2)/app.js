@@ -14,6 +14,27 @@ const submitBtn = document.getElementById("submit");
 let action = "plus";
 //const btnMinus = document.getElementById("minus");
 
+function computeNumbersWithAction(input1, input2, actionSymbol) {
+  const num1 = Number(input1.value);
+  const num2 = Number(input2.value);
+  if (actionSymbol == "+") {
+    return num1 + num2;
+  }
+
+  if (actionSymbol == "-") {
+    return num1 - num2;
+  }
+}
+
+function printResult(result) {
+  if (result < 0) {
+    resultElement.style.color = "red";
+  } else {
+    resultElement.style.color = "blue";
+  }
+  resultElement.textContent = result;
+}
+
 plusBtn.onclick = function () {
   action = "plus";
 };
@@ -23,11 +44,7 @@ minusBtn.onclick = function () {
 };
 
 submitBtn.onclick = function () {
-  if ((action == "plus")) {
-    const sum = Number(input1.value) + Number(input2.value);
-    resultElement.textContent = sum;
-  } else if ((action == "minus")) {
-    const sum = Number(input1.value) - Number(input2.value);
-    resultElement.textContent = sum;
+  function computeNumbersWithAction(input1, input2, actionSymbol) {
+    printResult(result);
   }
 };
