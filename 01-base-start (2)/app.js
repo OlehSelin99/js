@@ -1,32 +1,15 @@
-// const isProgrammer = true;
-// isProgrammer = false
-
-// let num = 1;
-// let num1 = num + 1;
-// let num2 = num + 1;
-
 const resultElement = document.getElementById("result");
 const input1 = document.getElementById("input1");
 const input2 = document.getElementById("input2");
 const plusBtn = document.getElementById("plus");
 const minusBtn = document.getElementById("minus");
+const multiplyBtn = document.getElementById("multiply");
+const divisionBtn = document.getElementById("divison");
+
 const submitBtn = document.getElementById("submit");
-let action = "plus";
-//const btnMinus = document.getElementById("minus");
+let action = "+";
 
-function computeNumbersWithAction(input1, input2, actionSymbol) {
-  const num1 = Number(input1.value);
-  const num2 = Number(input2.value);
-  if (actionSymbol == "+") {
-    return num1 + num2;
-  }
-
-  if (actionSymbol == "-") {
-    return num1 - num2;
-  }
-}
-
-function printResult(result) {
+function printResultWithColor(result) {
   if (result < 0) {
     resultElement.style.color = "red";
   } else {
@@ -36,17 +19,45 @@ function printResult(result) {
 }
 
 plusBtn.onclick = function () {
-  action = "plus";
+  action = "+";
 };
 
 minusBtn.onclick = function () {
-  action = "minus";
+  action = "-";
 };
 
+multiplyBtn.onclick = function () {
+  action = "*";
+};
 
+divisionBtn.onclick = function () {
+  action = "/";
+};
+
+function computeNumbersWithAction(inp1, inp2, actionSymbol) {
+  const num1 = Number(inp1.value);
+  const num2 = Number(inp2.value);
+
+  // return actionSymbol == "+"
+  //   ? num1 + num2
+  //   : actionSymbol == "-"
+  //   ? num1 - num2
+  //   : actionSymbol == "*"
+  //   ? num1 * num2
+  //   : actionSymbol == "/" ? num1 / num2
+
+  if (actionSymbol == "+") {
+    return num1 + num2;
+  } else if (actionSymbol == "-") {
+    return num1 - num2;
+  } else if (actionSymbol == "*") {
+    return num1 * num2;
+  } else if (actionSymbol == "/") {
+    return num1 / num2;
+  }
+}
 
 submitBtn.onclick = function () {
-  function computeNumbersWithAction(input1, input2, actionSymbol) {
-    printResult(result);
-  }
+  const result = computeNumbersWithAction(input1, input2, action);
+  printResultWithColor(result);
 };
