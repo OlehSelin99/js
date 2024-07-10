@@ -22,6 +22,8 @@ minusBtn.onclick = function () {
   action = "minus";
 };
 
+
+
 submitBtn.onclick = function () {
   if ((action == "plus")) {
     const sum = Number(input1.value) + Number(input2.value);
