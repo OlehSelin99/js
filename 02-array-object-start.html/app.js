@@ -15,30 +15,29 @@ const listElement = document.getElementById("list");
 
 // console.log(inputElement.value)
 
-const notes = ["Meet with Svitlana", "Meet with Boys"];
+const notes = ["Go to the Hall", "Meet with Shepards"];
 
 console.log(notes);
 
 function render() {
-  for (let note = notes[0]; note++; ) {
-    listElement.insertAdjacentHTML(
-      "beforeend"`<li
+  listElement.insertAdjacentHTML(
+    "beforeend",
+    `<li
          class="list-group-item d-flex justify-content-between align-items-center"
         >
-          <span>${note}</span>
+          <span>${notes[0]}</span>
           <span>
             <span class="btn btn-small btn-success">&check;</span>
             <span class="btn btn-small btn-danger">&times;</span>
           </span>
         </li>`
-    );
-  }
+  );
 }
 
 render();
 
-createBtn.onclick = function () {
-  if (inputElement.value.length === 0) {
-    return;
-  }
-};
+// createBtn.onclick = function () {
+//   if (inputElement.value.length === 0) {
+//     return;
+//   }
+// };
