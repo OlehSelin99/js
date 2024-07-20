@@ -92,7 +92,7 @@ createBtn.onclick = function () {
 };
 
 function getNoteTemplate(note, index) {
-  console.log(index);
+  // console.log(index);
   return `<li
          class="list-group-item d-flex justify-content-between align-items-center"
         >
