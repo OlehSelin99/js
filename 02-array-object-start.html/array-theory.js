@@ -39,18 +39,26 @@ const findedPesron = people.find((p) => p.budget === 300);
 
 /* filter */
 
-const filtered = people.filter(function (p) {
-  return p.budget > 9000;
-});
+// const filtered = people.filter(function (p) {
+//   return p.budget > 9000;
+// });
 
-let sumBudget = 0;
+// let sumBudget = 0;
 
-filtered.forEach(function (p) {
-  sumBudget += p.budget;
-});
+// filtered.forEach(function (p) {
+//   sumBudget += p.budget;
+// });
 
 /*
 const filtered2 = people.filter((p) => p.budget > 10000);
 */
 
-console.log(sumBudget);
+// const byBudget = (p) => p.budget > 5000;
+// const toNumber = (p) => p.budget;
+
+// const sumBudget2 = people
+//   .filter(byBudget)
+//   .map(toNumber)
+//   .reduce((acc, p) => acc + p, 0);
+
+// console.log(sumBudget2);
