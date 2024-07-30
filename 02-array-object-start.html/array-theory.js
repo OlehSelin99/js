@@ -62,3 +62,9 @@ const filtered2 = people.filter((p) => p.budget > 10000);
 //   .reduce((acc, p) => acc + p, 0);
 
 // console.log(sumBudget2);
+
+const string = "hi, bro";
+
+const reversed = string.split("").toReversed().join("");
+
+console.log(reversed);
