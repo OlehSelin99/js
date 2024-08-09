@@ -12,18 +12,18 @@ function getAge() {
 
 // console.log(output);
 
-console.log(firstName.length)
-console.log(firstName.toUpperCase())
-console.log(firstName.toLowerCase())
-console.log(firstName.charAt(0))
-console.log(firstName.indexOf('h'))
-console.log(firstName.indexOf('1'))
-console.log(firstName.toLowerCase().startsWith('ih'))
-console.log(firstName.endsWith('r'))
-console.log(firstName.repeat(2))
+// console.log(firstName.length)
+// console.log(firstName.toUpperCase())
+// console.log(firstName.toLowerCase())
+// console.log(firstName.charAt(0))
+// console.log(firstName.indexOf('h'))
+// console.log(firstName.indexOf('1'))
+// console.log(firstName.toLowerCase().startsWith('ih'))
+// console.log(firstName.endsWith('r'))
+// console.log(firstName.repeat(2))
 
-const password = 'Oleh Pro'
+// const password = 'Oleh Pro'
 
-console.log(password.trim())
-console.log(password.padStart(10))
+// console.log(password.trim())
+// console.log(password.padStart(10))
 
