@@ -38,11 +38,11 @@ function computeNumbersWithAction(inp1, inp2, actionSymbol) {
   const num1 = Number(inp1.value);
   const num2 = Number(inp2.value);
 
-  // return actionSymbol == "+"
-  //   ? num1 + num2
+  //  return actionSymbol == "+"
+  //    ? num1 + num2
   //   : actionSymbol == "-"
-  //   ? num1 - num2
-  //   : actionSymbol == "*"
+  //    ? num1 - num2
+  //    : actionSymbol == "*"
   //   ? num1 * num2
   //   : actionSymbol == "/" ? num1 / num2
 
