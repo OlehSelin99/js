@@ -1,4 +1,4 @@
-// // // Function Declaration
+//  Function Declaration
 // // // function greet(name) {
 // // //   console.log("Hello - ", name);
 // // // }
@@ -18,16 +18,16 @@
 // // //     greet("Oleh Selin")
 // // // }, 1500)
 
-// // // let counter = 0;
-// // // const interval = setInterval(function () {
-// // //   if (counter === 5) {
-// // //     clearInterval(interval);
-// // //   } else {
-// // //     console.log(++counter);
-// // //   }
-// // // }, 1000);
+let counter = 0;
+const interval = setInterval(function () {
+  if (counter === 5) {
+    clearInterval(interval);
+  } else {
+    console.log(++counter);
+  }
+}, 1000);
 
-// // // Arrow Functions
+//  Arrow Functions
 // // // function greet(name) {
 // // //   console.log("Hello - ", name);
 // // // }
@@ -46,7 +46,7 @@
 
 // // // console.log(abs2(2, 3));
 
-// // // Default Parameters
+//  Default Parameters
 // // const sum = (a, b) => a + b;
 // // console.log(sum(40, 2));
 
@@ -54,14 +54,14 @@
 // //   // let res = 0;
 // //   // for (let num of numbers) {
 // //   //   res += num;
-// //   // }
-// //   // return res;
-// //   return numbers.reduce((acc, cur) => (acc += cur), 0);
-// // }
+// / }
+//  return res;
+//   return numbers.reduce((acc, cur) => (acc += cur), 0);
+//  }
 
-// // console.log(sumAll(1, 2, 3, 4, 5));
+//  console.log(sumAll(1, 2, 3, 4, 5));
 
-// // Closures
+//  Closures
 
 // function createPerson(name) {
 //   return function (lastname) {

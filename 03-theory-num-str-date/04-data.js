@@ -19,21 +19,45 @@
 
 // ======
 
-const printTime = document.getElementById("output");
-const btnFull = document.getElementById("full");
-const btnDate = document.getElementById("date");
-const btnTime = document.getElementById("time");
+let mode = "time";
 
-printTime.textContent = new Date().toTimeString();
+const output = document.getElementById("output");
+const fullBtn = document.getElementById("full");
+const dateBtn = document.getElementById("date");
+const timeBtn = document.getElementById("time");
 
-btnFull.onclick = function () {
-    printTime.textContent = new Date().getFullYear();
-};
+function bindMode(name) {
+  return function () {
+    mode = name;
+    update();
+  };
+}
 
-btnDate.onclick = function () {
-    printTime.textContent = new Date().getDate();
-};
+fullBtn.onclick = bindMode("full");
 
-btnTime.onclick = function () {
-    printTime.textContent = new Date().toTimeString();
-};
+timeBtn.onclick = bindMode("time");
+
+dateBtn.onclick = bindMode("date");
+
+update();
+setInterval(update, 1000);
+
+function update() {
+  output.textContent = format(mode);
+}
+
+// Pure Function
+function format(formatMode) {
+  const now = new Date();
+
+  switch (formatMode) {
+    case "time":
+      return now.toLocaleTimeString();
+    case "date":
+      return now.toLocaleDateString();
+    case "full":
+      return now.toLocaleDateString() + " " + now.toLocaleTimeString();
+    default:
+      return now.toLocaleTimeString();
+  }
+}
