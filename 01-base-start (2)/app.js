@@ -46,6 +46,8 @@ function computeNumbersWithAction(inp1, inp2, actionSymbol) {
   //   ? num1 * num2
   //   : actionSymbol == "/" ? num1 / num2
 
+  debugger;
+
   if (actionSymbol == "+") {
     return num1 + num2;
   } else if (actionSymbol == "-") {
@@ -61,5 +63,3 @@ submitBtn.onclick = function () {
   const result = computeNumbersWithAction(input1, input2, action);
   printResultWithColor(result);
 };
-
-// >()

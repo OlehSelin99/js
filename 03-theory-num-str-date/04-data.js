@@ -26,6 +26,8 @@ const fullBtn = document.getElementById("full");
 const dateBtn = document.getElementById("date");
 const timeBtn = document.getElementById("time");
 
+console.log(output.textContent);
+
 function bindMode(name) {
   return function () {
     mode = name;
@@ -43,7 +45,9 @@ update();
 setInterval(update, 1000);
 
 function update() {
+  console.log(output.textContent);
   output.textContent = format(mode);
+  console.log(output.textContent);
 }
 
 // Pure Function
