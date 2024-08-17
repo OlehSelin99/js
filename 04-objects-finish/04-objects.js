@@ -67,8 +67,12 @@ const person = {
 // });
 
 const logger = {
-  key() {
-    console.log("Object keys: ", Object.keys(this));
+  keys(withText = true) {
+    if (withText) {
+      console.log("Object keys: ", Object.keys(this));
+    } else {
+      console.log(Object.keys(this));
+    }
   },
 
   keysAndValues() {
@@ -79,4 +83,7 @@ const logger = {
   },
 };
 
-
+// const bound = logger.keys.bind(person, false);
+// bound();
+// logger.keys.call(person, true);
+// logger.keys.apply(person, [false]);
