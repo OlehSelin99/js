@@ -1,4 +1,4 @@
-console.log("test");
+// console.log("test");
 
 const person = {
   name: "Oleh",
@@ -21,19 +21,62 @@ const person = {
   },
 
   info() {
-    console.log("Person name", person.name);
+    console.log("Person name", this.name);
   },
 };
 
-console.log(typeof person.arrow);
-console.log(typeof person.greet);
+// console.log(person.address);
+// const addressKey = "address";
+// console.log(person[addressKey]);
+// console.log(person['complex key']);
 
-person.info();
+// person.age++
+// person.languages.push('German')
 
-person.greet();
-person.arrow();
+// console.log(person.age)
+// console.log(person.languages)
 
-console.log(person);
+// person.address = undefined
+// delete person.address
+// console.log(person)
 
-console.log(typeof person);
-console.log(typeof null);
+// Destructoring
+// const age = person.age;
+// const name = person.name;
+// const languages = person.languages;
+
+// const name = "Ihor";
+
+// const { age, name: firstName = 'ola la la', languages } = person;
+
+// console.log(age, name, languages, firstName);
+
+// hasOwnPropety - цим я можу отримати лише власні ключі,
+// не заходячі у прототипи
+// for (let key in person) {
+//   if (person.hasOwnProperty(key)) {
+//     //console.log(key)
+//     console.log(person[key]);
+//   }
+// }
+
+// console.dir(Object)
+
+// Object.keys(person).forEach((key) => {
+//   console.log(person[key]);
+// });
+
+const logger = {
+  key() {
+    console.log("Object keys: ", Object.keys(this));
+  },
+
+  keysAndValues() {
+    Object.keys(this).forEach((key) => {
+      console.log("Key: ", key);
+      console.log("Value: ", this[key]);
+    });
+  },
+};
+
+
