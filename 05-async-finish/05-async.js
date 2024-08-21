@@ -15,23 +15,23 @@
 //   console.log("tick", ++count);
 // }, 1000);
 
-// function delay(callback, time = 1000) {
-//   setTimeout(callback, time);
-// }
-
 // delay(() => {
 //   console.log("timeout");
 // }, 2000);
 
-// const delay = (time = 1000) => {
-//   const promise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve([1, 2, 3]);
-//       reject("Error in delay");
-//     }, time);
-//   });
-//   return promise;
-// };
+const delay = (time = 1000) => {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve([1, 2, 3]);
+      reject("Error in delay");
+    }, time);
+  });
+  return promise;
+};
+
+// function delay(callback, time) {
+//   setTimeout(callback, time);
+// }
 
 // delay()
 //   .then((data) => {
@@ -52,7 +52,7 @@ const getData = () => new Promise((resolve) => resolve([1, 2, 3]));
 
 async function asyncExample() {
   try {
-    await de
+    await delay(2000);
     const data = await getData();
     console.log(data);
   } catch (err) {
@@ -63,5 +63,3 @@ async function asyncExample() {
 }
 
 asyncExample();
-
-
